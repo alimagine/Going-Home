@@ -4,6 +4,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
+[sub_resource type="PrismMesh" id="PrismMesh_4flbx"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i3pqv"]
 radius = 0.3
 height = 1.8
@@ -11,10 +13,17 @@ height = 1.8
 [node name="Player" type="CharacterBody3D" unique_id=227794787]
 script = ExtResource("1_4flbx")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=351959764]
+[node name="Pivot" type="Node3D" parent="." unique_id=629794997]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=351959764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14002085, 0)
 mesh = SubResource("CapsuleMesh_onrkg")
-skeleton = NodePath("../CollisionShape3D")
+skeleton = NodePath("../../CollisionShape3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot" unique_id=1679823355]
+transform = Transform3D(-3.0597967e-08, 3.0597974e-08, -0.7, 0.7, -3.059797e-08, -3.059797e-08, -3.0597974e-08, -0.7, -3.059797e-08, 0, 0.3950323, 0.5398853)
+mesh = SubResource("PrismMesh_4flbx")
+skeleton = NodePath("../MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=425552547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14002085, 0)
