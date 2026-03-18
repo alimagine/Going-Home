@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bj0dadhdksspl"]
+
+[ext_resource type="Texture2D" uid="uid://c7hjl5rst8wak" path="res://Assets/Environtment/ground-1.jpg" id="1_vu0ao"]
+[ext_resource type="PackedScene" uid="uid://dt32v7ft3wmxq" path="res://Dev-NH/character.tscn" id="2_jusg5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f25hu"]
+albedo_texture = ExtResource("1_vu0ao")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yetrp"]
+material = SubResource("StandardMaterial3D_f25hu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jusg5"]
+size = Vector3(2.0019531, 0.12817383, 1.9785156)
+
+[node name="Node3D" type="Node3D" unique_id=1260453403]
+
+[node name="Node3D" parent="." unique_id=1266401742 instance=ExtResource("2_jusg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5277358, 1.9140401, -0.41122794)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1330535308]
+transform = Transform3D(0.61471254, -0.591913, 0.5213132, 0.21926054, 0.7631207, 0.60792404, -0.7576631, -0.25939512, 0.59888303, 6.192824, 8.019608, 8.435301)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=872023285]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = SubResource("PlaneMesh_yetrp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1170166168]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1249793476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.058879554, 0)
+shape = SubResource("BoxShape3D_jusg5")
+debug_color = Color(0.9759808, 0, 0.4188846, 0.41960785)
