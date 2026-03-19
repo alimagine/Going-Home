@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@export var inventory_data: InventoryData
+
 @export var speed = 5.0          # kecepatan jalan biasa
 @export var sprint_speed = 9.0   # kecepatan lari (bisa kamu ubah di Inspector)
 @export var jump_velocity = 4.5

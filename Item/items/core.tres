@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b3f14u2f0bynq"]
+
+[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Item/item_data.gd" id="1_lyg61"]
+[ext_resource type="Texture2D" uid="uid://cftmwep3we6x2" path="res://Item/item_atlas.tres" id="2_rkrtx"]
+
+[resource]
+script = ExtResource("1_lyg61")
+item_name = "Core"
+item_desc = "Main Resource"
+stackable = true
+texture = ExtResource("2_rkrtx")
+metadata/_custom_type_script = "uid://c76i6iy8p4xnn"

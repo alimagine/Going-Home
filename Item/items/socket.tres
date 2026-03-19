@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://jx28cdlrlb6q"]
+
+[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Item/item_data.gd" id="1_rcqyp"]
+[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Item/icons.png" id="2_xooei"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppj67"]
+atlas = ExtResource("2_xooei")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_rcqyp")
+item_name = "Socket"
+item_desc = "Connector"
+stackable = true
+texture = SubResource("AtlasTexture_ppj67")
+metadata/_custom_type_script = "uid://c76i6iy8p4xnn"

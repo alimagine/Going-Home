@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c11sjqvw0w2g2"]
 
+[ext_resource type="Script" uid="uid://x5pa4v28y0wm" path="res://main.gd" id="1_dmtsy"]
 [ext_resource type="Texture2D" uid="uid://c7hjl5rst8wak" path="res://Assets/Environtment/ground-1.jpg" id="1_dwfq0"]
 [ext_resource type="PackedScene" uid="uid://cma8nycq1sw1w" path="res://player.tscn" id="1_grp85"]
 [ext_resource type="PackedScene" uid="uid://cjpre283815at" path="res://coin.tscn" id="3_0g472"]
+[ext_resource type="PackedScene" uid="uid://dee822vwwsatj" path="res://inventory.tscn" id="4_jiml2"]
+[ext_resource type="Script" uid="uid://chhv1r18c8nyd" path="res://ui.gd" id="4_p6y8m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g472"]
 albedo_texture = ExtResource("1_dwfq0")
@@ -23,6 +26,7 @@ background_mode = 2
 sky = SubResource("Sky_dwfq0")
 
 [node name="Node3D" type="Node3D" unique_id=2010236488]
+script = ExtResource("1_dmtsy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1762996006]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
@@ -62,3 +66,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0728865, 0.30891645, -17.7
 
 [node name="Node3D5" parent="." unique_id=404921701 instance=ExtResource("3_0g472")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53981686, 0.30891645, 23.237587)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=576551785]
+
+[node name="Control" type="Control" parent="UI" unique_id=1585386949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_p6y8m")
+metadata/_edit_use_anchors_ = true
+
+[node name="Coin" type="Panel" parent="UI/Control" unique_id=1331341535]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 177.0
+offset_bottom = 50.0
+
+[node name="Label" type="Label" parent="UI/Control/Coin" unique_id=208814914]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 2.0
+offset_right = 117.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 24
+text = "Coin"
+
+[node name="Inventory" parent="UI/Control" unique_id=1312889420 instance=ExtResource("4_jiml2")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -172.0
+offset_top = -82.0
+offset_right = 172.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0

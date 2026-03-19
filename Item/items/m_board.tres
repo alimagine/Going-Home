@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bid65f42f87an"]
+
+[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Item/item_data.gd" id="1_3663i"]
+[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Item/icons.png" id="2_vqmcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj68l"]
+atlas = ExtResource("2_vqmcm")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_3663i")
+item_name = "M Board"
+item_desc = "M Board"
+stackable = true
+texture = SubResource("AtlasTexture_tj68l")
+metadata/_custom_type_script = "uid://c76i6iy8p4xnn"
