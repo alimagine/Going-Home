@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cma8nycq1sw1w"]
 
 [ext_resource type="Script" uid="uid://b8v6fmqetuao2" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://chhv1r18c8nyd" path="res://ui.gd" id="2_onrkg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 
@@ -35,3 +36,24 @@ spring_length = 7.0
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1500160273]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3430778, 2.6798668)
+
+[node name="UI" type="Control" parent="SpringArm3D/Camera3D" unique_id=1343220564]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_onrkg")
+
+[node name="Panel" type="Panel" parent="SpringArm3D/Camera3D/UI" unique_id=104956315]
+layout_mode = 0
+offset_right = 167.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="SpringArm3D/Camera3D/UI/Panel" unique_id=1954455100]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 2.0
+offset_right = 117.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 24
+text = "Coin"

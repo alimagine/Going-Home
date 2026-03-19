@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c7hjl5rst8wak" path="res://Assets/Environtment/ground-1.jpg" id="1_dwfq0"]
 [ext_resource type="PackedScene" uid="uid://cma8nycq1sw1w" path="res://player.tscn" id="1_grp85"]
+[ext_resource type="PackedScene" uid="uid://cjpre283815at" path="res://coin.tscn" id="3_0g472"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g472"]
 albedo_texture = ExtResource("1_dwfq0")
@@ -41,3 +42,23 @@ environment = SubResource("Environment_grp85")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=936922511]
 transform = Transform3D(1, 0, 0, 0, 0.89958066, 0.4367547, 0, -0.4367547, 0.89958066, 0, 3.2312753, 6.7844915)
 shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2096164893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5401917, 2.8542442, 10.412511)
+use_collision = true
+size = Vector3(11.950623, 6.0180664, 1)
+
+[node name="Node3D" parent="." unique_id=688331568 instance=ExtResource("3_0g472")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7402873, 0.61652803, 11)
+
+[node name="Node3D2" parent="." unique_id=1471872499 instance=ExtResource("3_0g472")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.631813, 0.30891645, 17.50917)
+
+[node name="Node3D3" parent="." unique_id=700135367 instance=ExtResource("3_0g472")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.828447, 0.30891693, 5.134197)
+
+[node name="Node3D4" parent="." unique_id=1951700059 instance=ExtResource("3_0g472")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0728865, 0.30891645, -17.785952)
+
+[node name="Node3D5" parent="." unique_id=404921701 instance=ExtResource("3_0g472")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53981686, 0.30891645, 23.237587)
