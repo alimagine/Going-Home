@@ -1,5 +1,5 @@
 extends PanelContainer
-var Slot = preload("res://slot.tscn")
+var Slot = preload("res://Core/Inventory/Slot/slot.tscn")
 @onready var item_grid: GridContainer = $MarginContainer/GridContainer
 
 func set_inventory_data(inventory_data: InventoryData) -> void:

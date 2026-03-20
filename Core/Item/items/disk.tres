@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://t54anfuptop"]
 
-[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Item/item_data.gd" id="1_q8mvq"]
-[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Item/icons.png" id="2_okknk"]
+[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Core/Item/item_data.gd" id="1_rxsoj"]
+[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Core/Item/icons.png" id="2_g8u07"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qnguh"]
-atlas = ExtResource("2_okknk")
+atlas = ExtResource("2_g8u07")
 region = Rect2(224, 32, 32, 32)
 
 [resource]
-script = ExtResource("1_q8mvq")
+script = ExtResource("1_rxsoj")
 item_name = "Disk"
 item_desc = "Save the data"
 stackable = true

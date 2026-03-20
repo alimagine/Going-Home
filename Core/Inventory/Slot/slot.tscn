@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://box2wbh0s25yf"]
 
-[ext_resource type="Script" uid="uid://di23yi8lojppg" path="res://slot.gd" id="1_khion"]
+[ext_resource type="Script" uid="uid://di23yi8lojppg" path="res://Core/Inventory/Slot/slot.gd" id="1_khion"]
 
 [node name="Slot" type="PanelContainer" unique_id=1402934802]
 offset_right = 40.0

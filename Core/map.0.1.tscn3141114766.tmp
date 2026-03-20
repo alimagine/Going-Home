@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://c11sjqvw0w2g2"]
+
+[ext_resource type="Script" uid="uid://x5pa4v28y0wm" path="res://Core/main.gd" id="1_060bq"]
+[ext_resource type="Texture2D" uid="uid://c7hjl5rst8wak" path="res://Assets/Environtment/ground-1.jpg" id="2_5w5ly"]
+[ext_resource type="PackedScene" uid="uid://cma8nycq1sw1w" path="res://Core/Player/player.tscn" id="3_bd8m0"]
+[ext_resource type="Script" uid="uid://chhv1r18c8nyd" path="res://Core/UI/ui.gd" id="5_8kwp3"]
+[ext_resource type="PackedScene" uid="uid://dee822vwwsatj" path="res://Core/Inventory/inventory.tscn" id="6_bj8oe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g472"]
+albedo_texture = ExtResource("2_5w5ly")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_50pcy"]
+material = SubResource("StandardMaterial3D_0g472")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_grp85"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_grp85"]
+
+[sub_resource type="Sky" id="Sky_dwfq0"]
+sky_material = SubResource("ProceduralSkyMaterial_grp85")
+
+[sub_resource type="Environment" id="Environment_grp85"]
+background_mode = 2
+sky = SubResource("Sky_dwfq0")
+
+[node name="Node3D" type="Node3D" unique_id=2010236488]
+script = ExtResource("1_060bq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1762996006]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_50pcy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=162552370]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1143750297]
+shape = SubResource("ConcavePolygonShape3D_grp85")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=64450994]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2096164893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5401917, 2.8542442, 10.412511)
+use_collision = true
+size = Vector3(11.950623, 6.0180664, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1871202709]
+environment = SubResource("Environment_grp85")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=936922511]
+transform = Transform3D(1, 0, 0, 0, 0.89958066, 0.4367547, 0, -0.4367547, 0.89958066, 0, 3.2312753, 6.7844915)
+shadow_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=576551785]
+
+[node name="Control" type="Control" parent="UI" unique_id=1585386949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_8kwp3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Inventory" parent="UI/Control" unique_id=1312889420 instance=ExtResource("6_bj8oe")]
+visible = false
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 354.0
+offset_bottom = 82.0
+
+[node name="Player" parent="." unique_id=988935290 instance=ExtResource("3_bd8m0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjpre283815at"]
 
-[ext_resource type="Script" uid="uid://bjibmxl0fc1hq" path="res://coin.gd" id="1_d5gmh"]
+[ext_resource type="Script" uid="uid://bjibmxl0fc1hq" path="res://Core/Coin/coin.gd" id="1_d5gmh"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_6qpsl"]
 top_radius = 0.3

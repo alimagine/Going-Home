@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cma8nycq1sw1w"]
 
-[ext_resource type="Script" uid="uid://b8v6fmqetuao2" path="res://player.gd" id="1_4flbx"]
-[ext_resource type="Resource" uid="uid://f1hg6muxvfbt" path="res://inventory.tres" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://b8v6fmqetuao2" path="res://Core/Player/player.gd" id="1_4flbx"]
+[ext_resource type="Resource" uid="uid://f1hg6muxvfbt" path="res://Core/Inventory/inventory.tres" id="2_onrkg"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
 

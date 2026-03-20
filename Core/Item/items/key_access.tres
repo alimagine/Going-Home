@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://qg4culat7lk"]
 
-[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Item/item_data.gd" id="1_38tp4"]
-[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Item/icons.png" id="2_pdqfj"]
+[ext_resource type="Script" uid="uid://c76i6iy8p4xnn" path="res://Core/Item/item_data.gd" id="1_xqaa7"]
+[ext_resource type="Texture2D" uid="uid://dcm0j12avewsm" path="res://Core/Item/icons.png" id="2_v1guh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4hds"]
-atlas = ExtResource("2_pdqfj")
+atlas = ExtResource("2_v1guh")
 region = Rect2(224, 0, 32, 32)
 
 [resource]
-script = ExtResource("1_38tp4")
+script = ExtResource("1_xqaa7")
 item_name = "Key"
 item_desc = "Can give you access"
 texture = SubResource("AtlasTexture_a4hds")
