@@ -8,6 +8,8 @@ extends CharacterBody3D
 @export var mouse_sensitivity = 0.002
 @export var turn_speed = 10.0
 
+signal toggle_inventory()
+
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
@@ -18,6 +20,10 @@ func _input(event):
 		$SpringArm3D.rotation.y -= event.relative.x * mouse_sensitivity
 		$SpringArm3D.rotation.x -= event.relative.y * mouse_sensitivity
 		$SpringArm3D.rotation.x = clamp($SpringArm3D.rotation.x, -PI/2 + 0.1, PI/2 - 0.1)
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("inventory"):
+		toggle_inventory.emit()
 
 func _physics_process(delta):
 	if not is_on_floor():

@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$Coin/Label.text = "Coin : " + str(Global.coin)
+	pass
 
 func set_player_inventory_data(inventory_data: InventoryData) -> void:
 	inventory.set_inventory_data(inventory_data)
